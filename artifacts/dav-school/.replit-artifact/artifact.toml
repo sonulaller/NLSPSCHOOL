@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "DAV Public School Kaithal"
+version = "1.0.0"
+id = "artifacts/dav-school"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24901
+
+[services.development]
+run = "pnpm --filter @workspace/dav-school run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/dav-school", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/dav-school/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24901"
+BASE_PATH = "/"
