@@ -31,7 +31,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-3xl"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6 mt-16">
             <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
             Admissions Open for 2025-26
           </div>
