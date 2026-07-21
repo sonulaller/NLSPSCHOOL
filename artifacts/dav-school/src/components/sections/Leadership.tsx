@@ -43,7 +43,7 @@ export default function Leadership() {
               
               <div className="space-y-4 text-white/80 text-lg leading-relaxed italic">
                 <p>
-                  "Education is not merely the accumulation of facts, but the preparation of life itself. At New Little Star Kasan, we strive to create an environment where strong values harmonize with modern scientific thought."
+                  "Education is not merely the accumulation of facts, but the preparation of life itself. At NLSPS Kasan, we strive to create an environment where strong values harmonize with modern scientific thought."
                 </p>
                 <p>
                   "Our goal is to nurture well-rounded individuals who are intellectually competent, morally upright, and socially committed. We believe in empowering every child to discover their true potential and shine brightly in this rapidly changing world."

@@ -30,7 +30,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-lg text-primary mb-1">Campus Address</h4>
-                <p className="text-muted-foreground">New Little Star Public School<br />Kasan, Haryana<br />India</p>
+                <p className="text-muted-foreground">NLSPS Kasan<br />Kasan, Haryana<br />India</p>
               </div>
             </div>
             

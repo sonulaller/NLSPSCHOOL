@@ -62,7 +62,7 @@ export default function About() {
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              New Little Star Public School, Kasan is a premier institution affiliated with CBSE. We blend timeless values with contemporary pedagogical practices to nurture global citizens.
+              NLSPS Kasan is a premier institution affiliated with CBSE. We blend timeless values with contemporary pedagogical practices to nurture global citizens.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">

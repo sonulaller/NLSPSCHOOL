@@ -16,7 +16,7 @@ export default function Gallery() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-secondary font-bold uppercase tracking-widest text-sm block mb-3">Moments</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Life at New Little Star</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Life at NLSPS Kasan</h2>
           </motion.div>
         </div>
 

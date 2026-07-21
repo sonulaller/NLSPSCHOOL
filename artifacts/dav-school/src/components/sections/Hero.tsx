@@ -42,7 +42,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed">
-            New Little Star Public School Kasan shapes future leaders through values-driven education, state-of-the-art facilities, and a legacy of academic brilliance.
+            NLSPS Kasan shapes future leaders through values-driven education, state-of-the-art facilities, and a legacy of academic brilliance.
           </p>
           
           <div className="flex flex-wrap items-center gap-4">
