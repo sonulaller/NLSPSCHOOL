@@ -52,10 +52,10 @@ export default function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className={`font-serif font-bold text-xl leading-tight transition-colors duration-300 ${isScrolled ? "text-primary" : "text-white"}`}>
-              DAV Public School
+              New Little Star Public School
             </span>
             <span className={`text-[10px] tracking-widest uppercase transition-colors duration-300 ${isScrolled ? "text-muted-foreground" : "text-white/80"}`}>
-              Kaithal
+              Kasan
             </span>
           </div>
         </Link>

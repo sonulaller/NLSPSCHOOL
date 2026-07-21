@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/50 z-10" />
         <img 
           src="/images/hero-campus.jpg" 
-          alt="DAV Public School Campus" 
+          alt="New Little Star Public School Campus" 
           className="w-full h-full object-cover"
         />
       </motion.div>
@@ -42,7 +42,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed">
-            DAV Public School Kaithal shapes future leaders through values-driven education, state-of-the-art facilities, and a legacy of academic brilliance.
+            New Little Star Public School Kasan shapes future leaders through values-driven education, state-of-the-art facilities, and a legacy of academic brilliance.
           </p>
           
           <div className="flex flex-wrap items-center gap-4">

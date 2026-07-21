@@ -62,11 +62,11 @@ export default function About() {
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Rooted in the profound philosophy of Maharishi Dayanand Saraswati, DAV Public School, Kaithal is a premier institution affiliated with CBSE. We blend the timeless values of Vedic culture with contemporary pedagogical practices to nurture global citizens.
+              New Little Star Public School, Kasan is a premier institution affiliated with CBSE. We blend timeless values with contemporary pedagogical practices to nurture global citizens.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our motto, <strong className="text-primary">"Tamso Ma Jyotirgamaya"</strong> (Lead us from darkness to light), guides every endeavor. We don't just teach; we inspire minds, build character, and shape the future leaders of India.
+              Our motto, <strong className="text-primary">"Let Knowledge Illuminate Life"</strong>, guides every endeavor. We don't just teach; we inspire minds, build character, and shape the future leaders of India.
             </p>
 
             <div className="pt-6">

@@ -13,10 +13,10 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-serif font-bold text-lg leading-tight">
-                  DAV Public School
+                  New Little Star Public School
                 </span>
                 <span className="text-[10px] tracking-widest uppercase text-white/60">
-                  Kaithal
+                  Kasan
                 </span>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center text-white/40 text-xs">
-          <p>&copy; {new Date().getFullYear()} DAV Public School, Kaithal. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} New Little Star Public School, Kasan. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

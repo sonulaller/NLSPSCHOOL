@@ -16,7 +16,7 @@ export default function Contact() {
               <div className="text-center text-gray-500">
                 <MapPin size={48} className="mx-auto mb-4 opacity-50" />
                 <p className="font-medium">Interactive Map Integration</p>
-                <p className="text-sm">Near Bus Stand, Kaithal</p>
+                <p className="text-sm">Kasan, Haryana</p>
               </div>
             </div>
             {/* Visual overlay to look like a map */}
@@ -30,7 +30,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-lg text-primary mb-1">Campus Address</h4>
-                <p className="text-muted-foreground">DAV Public School<br />Near Bus Stand, Kaithal<br />Haryana 136027, India</p>
+                <p className="text-muted-foreground">New Little Star Public School<br />Kasan, Haryana<br />India</p>
               </div>
             </div>
             
@@ -50,7 +50,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-lg text-primary mb-1">Email</h4>
-                <p className="text-muted-foreground">davkaithal@gmail.com<br />info@davkaithal.edu.in</p>
+                <p className="text-muted-foreground">newlittlestarkasan@gmail.com<br />info@newlittlestarkasan.edu.in</p>
               </div>
             </div>
 
