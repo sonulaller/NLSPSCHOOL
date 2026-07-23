@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { Menu, X, BookOpen } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -47,8 +47,8 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 z-50">
-          <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-300 ${isScrolled ? "bg-primary text-white" : "bg-white text-primary"}`}>
-             <BookOpen size={24} />
+          <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-white shadow">
+            <img src="/school-logo.jpg" alt="NLSPS Kasan Logo" className="w-full h-full object-cover" />
           </div>
           <div className="flex flex-col">
             <span className={`font-serif font-bold text-xl leading-tight transition-colors duration-300 ${isScrolled ? "text-primary" : "text-white"}`}>
