@@ -10,17 +10,18 @@ export default function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Map Placeholder */}
-          <div className="bg-gray-100 rounded-3xl overflow-hidden h-[400px] relative">
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
-              <div className="text-center text-gray-500">
-                <MapPin size={48} className="mx-auto mb-4 opacity-50" />
-                <p className="font-medium">Interactive Map Integration</p>
-                <p className="text-sm">Kasan, Haryana</p>
-              </div>
-            </div>
-            {/* Visual overlay to look like a map */}
-            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
+          {/* Google Map */}
+          <div className="rounded-3xl overflow-hidden h-[400px] shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.0!2d76.3!3d29.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNew+Little+Star+Public+School+Kasan!5e0!3m2!1sen!2sin!4v1!5m2!1sen!2sin&q=New+Little+Star+Public+School,+Kichhana+Road,+Kasan,+Kaithal,+Haryana+136044"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="New Little Star Public School Location"
+            />
           </div>
 
           <div className="space-y-8 flex flex-col justify-center">
@@ -30,7 +31,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-lg text-primary mb-1">Campus Address</h4>
-                <p className="text-muted-foreground">NLSPS Kasan<br />Kasan, Haryana<br />India</p>
+                <p className="text-muted-foreground">New Little Star Public School<br />Kichhana Road, Kasan<br />Kaithal, Haryana 136044</p>
               </div>
             </div>
             
@@ -40,7 +41,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-lg text-primary mb-1">Phone</h4>
-                <p className="text-muted-foreground">+91-1746-222333<br />+91-98765-43210</p>
+                <p className="text-muted-foreground">Coming Soon</p>
               </div>
             </div>
             
@@ -50,7 +51,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-lg text-primary mb-1">Email</h4>
-                <p className="text-muted-foreground">newlittlestarkasan@gmail.com<br />info@newlittlestarkasan.edu.in</p>
+                <p className="text-muted-foreground">newlittlestarkasan@gmail.com</p>
               </div>
             </div>
 
@@ -60,7 +61,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-lg text-primary mb-1">Working Hours</h4>
-                <p className="text-muted-foreground">Monday - Saturday: 8:00 AM to 2:30 PM<br />Sunday: Closed</p>
+                <p className="text-muted-foreground">Monday – Saturday: Open · Closes 2:00 PM<br />Sunday: Closed</p>
               </div>
             </div>
           </div>
