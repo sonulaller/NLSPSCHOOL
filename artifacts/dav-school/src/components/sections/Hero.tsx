@@ -17,9 +17,10 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-black/50 z-10" />
         <img 
-          src="/images/hero-campus.jpg" 
+          src="/school-bg.png" 
           alt="New Little Star Public School Campus" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
+          style={{ minWidth: "100%", minHeight: "100%" }}
         />
       </motion.div>
 
