@@ -86,6 +86,20 @@ export default function Gallery() {
               <h4 className="font-serif font-bold text-xl">School Celebration</h4>
             </div>
           </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="col-span-1 md:col-span-2 lg:col-span-4 rounded-2xl overflow-hidden relative group"
+            style={{ height: "300px" }}
+          >
+            <img src="/gallery-6.jpg" alt="Shaheed Diwas Celebration" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+            <div className="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h4 className="font-serif font-bold text-xl">Shaheed Diwas — Patriotic Tribute</h4>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
