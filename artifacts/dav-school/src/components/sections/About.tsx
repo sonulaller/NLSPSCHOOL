@@ -84,8 +84,8 @@ export default function About() {
               className="relative z-10 rounded-2xl overflow-hidden shadow-2xl"
             >
               <img 
-                src="/images/gallery-1.jpg" 
-                alt="Students studying" 
+                src="/about-school.jpg" 
+                alt="New Little Star Public School Kasan Students and Staff" 
                 className="w-full h-auto object-cover aspect-[4/3]"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
