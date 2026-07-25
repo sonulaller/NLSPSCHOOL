@@ -29,7 +29,7 @@ export default function Leadership() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="font-serif text-2xl font-bold">Dr. Rajesh Sharma</h3>
+                  <h3 className="font-serif text-2xl font-bold">Mr. Angrej Singh</h3>
                   <p className="text-secondary font-medium">Principal</p>
                 </div>
               </div>
@@ -52,8 +52,8 @@ export default function Leadership() {
               
               <div className="pt-6">
                 <img src="/images/signature-placeholder.png" alt="Signature" className="h-12 opacity-80 grayscale invert" onError={(e) => e.currentTarget.style.display = 'none'} />
-                <p className="font-serif font-bold text-xl mt-4">Dr. Rajesh Sharma</p>
-                <p className="text-sm text-white/60">M.Sc., B.Ed., Ph.D.</p>
+                <p className="font-serif font-bold text-xl mt-4">Mr. Angrej Singh</p>
+                <p className="text-sm text-white/60">Principal, NLSPS Kasan</p>
               </div>
             </div>
           </div>
