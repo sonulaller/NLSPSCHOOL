@@ -1,9 +1,16 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
-import NotFound from '@/pages/not-found';
-import Home from '@/pages/home';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
+import Home from '@/pages/home';
+import AboutPage from '@/pages/about';
+import AcademicsPage from '@/pages/academics';
+import FacilitiesPage from '@/pages/facilities';
+import GalleryPage from '@/pages/gallery';
+import AdmissionsPage from '@/pages/admissions';
+import ContactPage from '@/pages/contact';
+import NoticeBoardPage from '@/pages/notice-board';
+import NotFound from '@/pages/not-found';
 
 const queryClient = new QueryClient();
 
@@ -11,6 +18,13 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/academics" component={AcademicsPage} />
+      <Route path="/facilities" component={FacilitiesPage} />
+      <Route path="/gallery" component={GalleryPage} />
+      <Route path="/admissions" component={AdmissionsPage} />
+      <Route path="/contact" component={ContactPage} />
+      <Route path="/notice-board" component={NoticeBoardPage} />
       <Route component={NotFound} />
     </Switch>
   );

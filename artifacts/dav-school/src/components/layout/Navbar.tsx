@@ -1,46 +1,37 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Academics", href: "#academics" },
-  { name: "Facilities", href: "#facilities" },
-  { name: "Admissions", href: "#admissions" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Contact", href: "#contact" },
+  { name: "About", href: "/about" },
+  { name: "Academics", href: "/academics" },
+  { name: "Facilities", href: "/facilities" },
+  { name: "Admissions", href: "/admissions" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
+
+  const isHome = location === "/";
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      const offsetTop = element.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth"
-      });
-    }
-  };
+  // On non-home pages always show solid navbar
+  const solidNav = !isHome || isScrolled;
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        solidNav
           ? "bg-white/95 backdrop-blur-md shadow-md py-3"
           : "bg-transparent py-5"
       }`}
@@ -50,34 +41,32 @@ export default function Navbar() {
           <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-white shadow">
             <img src="/school-logo.jpg" alt="NLSPS Kasan Logo" className="w-full h-full object-cover" />
           </div>
-          <div className="flex flex-col">
-            <span className={`font-serif font-bold text-xl leading-tight transition-colors duration-300 ${isScrolled ? "text-primary" : "text-white"}`}>
-              NLSPS KASAN
-            </span>
-          </div>
+          <span className={`font-serif font-bold text-xl leading-tight transition-colors duration-300 ${solidNav ? "text-primary" : "text-white"}`}>
+            NLSPS KASAN
+          </span>
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
-              onClick={(e) => scrollToSection(e, link.href)}
               className={`text-sm font-medium tracking-wide transition-colors hover:text-secondary ${
-                isScrolled ? "text-foreground" : "text-white"
+                location === link.href
+                  ? "text-secondary border-b-2 border-secondary pb-0.5"
+                  : solidNav ? "text-foreground" : "text-white"
               }`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <a 
-            href="#admissions"
-            onClick={(e) => scrollToSection(e, "#admissions")}
+          <Link
+            href="/admissions"
             className="bg-secondary text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-secondary/90 transition-colors shadow-lg"
           >
             Apply Now
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -86,9 +75,9 @@ export default function Navbar() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
-            <X className={isScrolled || mobileMenuOpen ? "text-foreground" : "text-white"} />
+            <X className="text-foreground" />
           ) : (
-            <Menu className={isScrolled ? "text-foreground" : "text-white"} />
+            <Menu className={solidNav ? "text-foreground" : "text-white"} />
           )}
         </button>
       </div>
@@ -103,15 +92,24 @@ export default function Navbar() {
             className="absolute top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center gap-8 z-40"
           >
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="text-2xl font-serif text-primary hover:text-secondary transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-2xl font-serif transition-colors ${
+                  location === link.href ? "text-secondary" : "text-primary hover:text-secondary"
+                }`}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
+            <Link
+              href="/admissions"
+              onClick={() => setMobileMenuOpen(false)}
+              className="bg-secondary text-white px-8 py-3 rounded-full font-bold hover:bg-secondary/90 transition-colors"
+            >
+              Apply Now
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
