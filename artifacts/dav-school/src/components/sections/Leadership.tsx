@@ -23,9 +23,9 @@ export default function Leadership() {
             <div className="md:col-span-5 relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
                 <img 
-                  src="/images/principal-avatar.jpg" 
+                  src="/principal.jpg" 
                   alt="Principal" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80" />
                 <div className="absolute bottom-6 left-6 right-6">
