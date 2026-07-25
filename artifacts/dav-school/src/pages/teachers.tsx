@@ -5,6 +5,12 @@ import { motion } from "framer-motion";
 
 const teachers = [
   {
+    name: "Mr. Virender Singh",
+    subject: "Managing Director",
+    qualification: "Managing Director, NLSPS Kasan",
+    photo: "/managing-director.jpg",
+  },
+  {
     name: "Mr. Angrej Singh",
     subject: "Principal",
     qualification: "Principal, NLSPS Kasan",
