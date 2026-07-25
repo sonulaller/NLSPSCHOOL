@@ -23,8 +23,35 @@ export default function TeachersPage() {
           subtitle="Dedicated educators committed to shaping the future of every student at NLSPS Kasan."
         />
 
+        {/* Group Photo */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-10">
+              <span className="text-secondary font-bold uppercase tracking-widest text-sm block mb-3">Our Team</span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary">Our Teaching Staff</h2>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="rounded-3xl overflow-hidden shadow-xl max-w-5xl mx-auto"
+            >
+              <img
+                src="/teachers-group.jpg"
+                alt="NLSPS Kasan Teaching Staff"
+                className="w-full h-auto object-cover"
+              />
+            </motion.div>
+          </div>
+        </section>
+
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <span className="text-secondary font-bold uppercase tracking-widest text-sm block mb-3">Faculty</span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary">Meet the Team</h2>
+            </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               {teachers.map((teacher, idx) => (
                 <motion.div
