@@ -52,10 +52,12 @@ export default function Gallery() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="rounded-2xl overflow-hidden relative group bg-secondary/10 flex items-center justify-center"
+            className="rounded-2xl overflow-hidden relative group"
           >
-            <div className="text-center text-secondary/50 p-6">
-              <p className="font-serif text-lg font-semibold">More Photos<br />Coming Soon</p>
+            <img src="/gallery-3.jpg" alt="Independence Day Celebration" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+            <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h4 className="font-serif font-bold text-lg">Independence Day Celebration</h4>
             </div>
           </motion.div>
 
