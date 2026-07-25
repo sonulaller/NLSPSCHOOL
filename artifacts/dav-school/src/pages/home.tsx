@@ -14,9 +14,9 @@ const quickLinks = [
     icon: <Users size={28} className="text-secondary" />,
   },
   {
-    title: "Academics",
-    desc: "CBSE curriculum from Nursery to Class XII — Science, Commerce & Humanities.",
-    href: "/academics",
+    title: "Teachers",
+    desc: "Meet our dedicated faculty — experienced educators shaping young minds.",
+    href: "/teachers",
     icon: <BookOpen size={28} className="text-secondary" />,
   },
   {
