@@ -4,9 +4,10 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
+  { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Teachers", href: "/teachers" },
-  { name: "Facilities", href: "/facilities" },
+  { name: "SMC", href: "/smc" },
   { name: "Admissions", href: "/admissions" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
