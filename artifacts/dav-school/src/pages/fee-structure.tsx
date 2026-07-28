@@ -2,6 +2,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeader from "@/components/layout/PageHeader";
 import { motion } from "framer-motion";
+import { Download } from "lucide-react";
 
 const feeData = [
   { class: "1st",  admission: "4000", registration: "1000", monthly: "1100", bus: "400" },
@@ -31,6 +32,44 @@ export default function FeeStructurePage() {
 
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
+
+            {/* Download Table */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="mb-12 bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100"
+            >
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-primary text-white">
+                    <th className="px-6 py-3 text-left font-semibold w-24">Sr. No.</th>
+                    <th className="px-6 py-3 text-left font-semibold">Description</th>
+                    <th className="px-6 py-3 text-left font-semibold">Upload Date</th>
+                    <th className="px-6 py-3 text-left font-semibold">Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t border-gray-100">
+                    <td className="px-6 py-4 text-muted-foreground">1</td>
+                    <td className="px-6 py-4 font-medium text-foreground">Fee Structure Download</td>
+                    <td className="px-6 py-4 text-muted-foreground">1-April-2024</td>
+                    <td className="px-6 py-4">
+                      <a
+                        href="/attached_assets/fees_structure__1785215521759.png"
+                        download="Fee_Structure_2024.png"
+                        className="inline-flex items-center gap-1.5 text-secondary font-semibold hover:underline"
+                      >
+                        <Download size={14} />
+                        Download
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </motion.div>
+
             <div className="text-center mb-12">
               <span className="text-secondary font-bold uppercase tracking-widest text-sm block mb-3">Fee Structure</span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary">Class-wise Fee Details</h2>

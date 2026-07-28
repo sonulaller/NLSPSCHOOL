@@ -28,6 +28,7 @@ function Router() {
       <Route path="/admissions" component={AdmissionsPage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/notice-board" component={NoticeBoardPage} />
+      <Route path="/fee-structure" component={FeeStructurePage} />
       <Route component={NotFound} />
     </Switch>
   );
