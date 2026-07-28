@@ -6,6 +6,7 @@ import Home from '@/pages/home';
 import AboutPage from '@/pages/about';
 import TeachersPage from '@/pages/teachers';
 import SMCPage from '@/pages/smc';
+import FeeStructurePage from '@/pages/fee-structure';
 import FacilitiesPage from '@/pages/facilities';
 import GalleryPage from '@/pages/gallery';
 import AdmissionsPage from '@/pages/admissions';
