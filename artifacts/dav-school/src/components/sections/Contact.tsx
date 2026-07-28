@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -11,17 +11,28 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Google Map */}
-          <div className="rounded-3xl overflow-hidden h-[400px] shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.0!2d76.3!3d29.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNew+Little+Star+Public+School+Kasan!5e0!3m2!1sen!2sin!4v1!5m2!1sen!2sin&q=New+Little+Star+Public+School,+Kichhana+Road,+Kasan,+Kaithal,+Haryana+136044"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="New Little Star Public School Location"
-            />
+          <div className="flex flex-col gap-3">
+            <div className="rounded-3xl overflow-hidden h-[380px] shadow-lg">
+              <iframe
+                src="https://maps.google.com/maps?q=New+Little+Star+Public+School+Kasan+Kaithal+Haryana&output=embed&z=16"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="New Little Star Public School Location"
+              />
+            </div>
+            <a
+              href="https://maps.google.com/maps?q=New+Little+Star+Public+School,+Balu+Road,+Kasan,+Kaithal,+Haryana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-secondary hover:underline"
+            >
+              <ExternalLink size={14} />
+              View on Google Maps
+            </a>
           </div>
 
           <div className="space-y-8 flex flex-col justify-center">
@@ -31,7 +42,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-lg text-primary mb-1">Campus Address</h4>
-                <p className="text-muted-foreground">New Little Star Public School<br />Kichhana Road, Kasan<br />Kaithal, Haryana 136044</p>
+                <p className="text-muted-foreground">New Little Star Public School<br />Near Balu Road, Kasan<br />Kaithal, Haryana</p>
               </div>
             </div>
             
