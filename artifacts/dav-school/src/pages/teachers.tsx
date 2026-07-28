@@ -16,6 +16,12 @@ const teachers = [
     qualification: "Principal, NLSPS Kasan",
     photo: "/principal.jpg",
   },
+  {
+    name: "Mrs. Dimple",
+    subject: "Teacher",
+    qualification: "NLSPS Kasan",
+    photo: "/mrs-dimple.png",
+  },
 ];
 
 export default function TeachersPage() {
