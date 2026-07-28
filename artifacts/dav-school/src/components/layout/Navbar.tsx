@@ -10,6 +10,7 @@ const navLinks = [
     href: "/about",
     dropdown: [
       { name: "About Us", href: "/about" },
+      { name: "Fee Structure", href: "/fee-structure" },
       { name: "SMC Members", href: "/smc" },
     ],
   },
