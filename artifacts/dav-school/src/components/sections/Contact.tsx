@@ -42,7 +42,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-lg text-primary mb-1">Campus Address</h4>
-                <p className="text-muted-foreground">New Little Star Public School<br />Near Balu Road, Kasan<br />Kaithal, Haryana</p>
+                <p className="text-muted-foreground">New Little Star Public School<br />Kichhana Road, Kasan<br />Kaithal, Haryana</p>
               </div>
             </div>
             
