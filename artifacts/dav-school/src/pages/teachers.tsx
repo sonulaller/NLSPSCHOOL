@@ -17,12 +17,6 @@ const teachers = [
     photo: "/principal.jpg",
   },
   {
-    name: "Mrs. Dimple",
-    subject: "Teacher",
-    qualification: "NLSPS Kasan",
-    photo: "/mrs-dimple.png",
-  },
-  {
     name: "Mr. Nand Lal",
     subject: "Teacher",
     qualification: "NLSPS Kasan",
