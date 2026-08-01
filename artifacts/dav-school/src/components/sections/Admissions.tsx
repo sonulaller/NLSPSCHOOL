@@ -97,6 +97,10 @@ export default function Admissions() {
                 <label className="block text-sm font-medium mb-1 text-white/80">Parent's Name</label>
                 <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40" placeholder="Enter full name" />
               </div>
+              <div>
+                <label className="block text-sm font-medium mb-1 text-white/80">Email Address</label>
+                <input type="email" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40" placeholder="Enter email address" />
+              </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium mb-1 text-white/80">Phone</label>
