@@ -38,8 +38,7 @@ export default function Hero() {
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white font-bold leading-tight mb-6">
-            NLSP <br />
-            <span className="text-secondary italic">School</span>
+            NLSP <span className="text-secondary italic">School</span>
           </h1>
           
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed">
