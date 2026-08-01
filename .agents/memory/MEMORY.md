@@ -1,0 +1,1 @@
+- [User key storage preference](key-storage.md) — All API keys/secrets go directly into `RESEND_API_KEY` file at project root, not Replit Secrets.
