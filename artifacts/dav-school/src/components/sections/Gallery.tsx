@@ -20,100 +20,34 @@ export default function Gallery() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[250px]">
-          {/* Real photo — Physical Activity */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="col-span-1 md:col-span-2 row-span-2 rounded-2xl overflow-hidden relative group"
-          >
-            <img src="/gallery-1.jpg" alt="Physical Activity Class" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-            <div className="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h4 className="font-serif font-bold text-xl">Physical Activity & Fitness</h4>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="rounded-2xl overflow-hidden relative group"
-          >
-            <img src="/gallery-2.jpg" alt="Student Achievement" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-            <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h4 className="font-serif font-bold text-lg">Student Achievement</h4>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="rounded-2xl overflow-hidden relative group"
-          >
-            <img src="/gallery-3.jpg" alt="Independence Day Celebration" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-            <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h4 className="font-serif font-bold text-lg">Independence Day Celebration</h4>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="col-span-1 md:col-span-2 rounded-2xl overflow-hidden relative group"
-          >
-            <img src="/gallery-4.jpg" alt="Republic Day Parade" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-            <div className="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h4 className="font-serif font-bold text-xl">Republic Day Parade</h4>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="col-span-1 md:col-span-2 rounded-2xl overflow-hidden relative group"
-          >
-            <img src="/gallery-5.jpg" alt="School Celebration" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-            <div className="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h4 className="font-serif font-bold text-xl">School Celebration</h4>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="col-span-1 md:col-span-2 rounded-2xl overflow-hidden relative group"
-            style={{ height: "300px" }}
-          >
-            <img src="/gallery-6.jpg" alt="Shaheed Diwas Celebration" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-            <div className="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h4 className="font-serif font-bold text-xl">Shaheed Diwas — Patriotic Tribute</h4>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.7 }}
-            className="col-span-1 md:col-span-2 rounded-2xl overflow-hidden relative group"
-            style={{ height: "300px" }}
-          >
-            <img src="/gallery-7.jpg" alt="Flag Rally" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-            <div className="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h4 className="font-serif font-bold text-xl">Flag Rally</h4>
-            </div>
-          </motion.div>
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-4">
+          {[
+            { src: "/gallery-1.jpg", alt: "Physical Activity Class", label: "Physical Activity & Fitness", delay: 0.1 },
+            { src: "/gallery-2.jpg", alt: "Student Achievement", label: "Student Achievement", delay: 0.2 },
+            { src: "/gallery-3.jpg", alt: "Independence Day Celebration", label: "Independence Day Celebration", delay: 0.3 },
+            { src: "/gallery-4.jpg", alt: "Republic Day Parade", label: "Republic Day Parade", delay: 0.4 },
+            { src: "/gallery-5.jpg", alt: "School Celebration", label: "School Celebration", delay: 0.5 },
+            { src: "/gallery-6.jpg", alt: "Shaheed Diwas Celebration", label: "Shaheed Diwas — Patriotic Tribute", delay: 0.6 },
+            { src: "/gallery-7.jpg", alt: "Flag Rally", label: "Flag Rally", delay: 0.7 },
+          ].map((item, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.5, delay: item.delay }}
+              className="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group"
+            >
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+              <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h4 className="font-serif font-bold text-lg">{item.label}</h4>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
