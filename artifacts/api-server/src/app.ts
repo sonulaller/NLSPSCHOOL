@@ -6,6 +6,8 @@ import { logger } from "./lib/logger";
 
 const app: Express = express();
 
+app.set("trust proxy", 1);
+
 app.use(
   pinoHttp({
     logger,
@@ -25,8 +27,10 @@ app.use(
     },
   }),
 );
-app.use(cors());
-app.use(express.json());
+// The school frontend calls this API through the same public origin. Do not
+// emit permissive CORS headers that would let arbitrary sites use this proxy.
+app.use(cors({ origin: false }));
+app.use(express.json({ limit: "64kb" }));
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", router);

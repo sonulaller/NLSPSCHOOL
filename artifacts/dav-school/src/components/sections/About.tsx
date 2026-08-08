@@ -14,18 +14,20 @@ function Counter({ to, suffix }: { to: number; suffix: string }) {
   const isInView = useInView(nodeRef, { once: true, margin: "-50px" });
 
   useEffect(() => {
-    if (isInView && nodeRef.current) {
-      const controls = animate(0, to, {
-        duration: 2,
-        ease: "easeOut",
-        onUpdate(value) {
-          if (nodeRef.current) {
-            nodeRef.current.textContent = Math.round(value).toString() + suffix;
-          }
-        },
-      });
-      return () => controls.stop();
+    if (!isInView || !nodeRef.current) {
+      return undefined;
     }
+
+    const controls = animate(0, to, {
+      duration: 2,
+      ease: "easeOut",
+      onUpdate(value) {
+        if (nodeRef.current) {
+          nodeRef.current.textContent = Math.round(value).toString() + suffix;
+        }
+      },
+    });
+    return () => controls.stop();
   }, [to, suffix, isInView]);
 
   return <span ref={nodeRef}>0{suffix}</span>;

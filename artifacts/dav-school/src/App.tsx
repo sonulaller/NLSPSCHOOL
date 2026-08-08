@@ -13,6 +13,7 @@ import AdmissionsPage from '@/pages/admissions';
 import ContactPage from '@/pages/contact';
 import NoticeBoardPage from '@/pages/notice-board';
 import NotFound from '@/pages/not-found';
+import ChatWidget from '@/components/layout/ChatWidget';
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ function App() {
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
           <Router />
         </WouterRouter>
+        <ChatWidget />
         <Toaster />
       </TooltipProvider>
     </QueryClientProvider>
