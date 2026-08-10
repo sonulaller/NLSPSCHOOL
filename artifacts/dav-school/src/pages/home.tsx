@@ -4,7 +4,6 @@ import { ArrowRight, BookOpen, Building2, Users, Image, Bell, Phone } from "luci
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
-import AdmissionBadge from "@/components/ui/AdmissionBadge";
 
 const quickLinks = [
   {
@@ -55,7 +54,6 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen relative">
       <Navbar />
-      <AdmissionBadge />
       <main className="flex-1">
         <Hero />
 

@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router, type NextFunction, type Request, type Response } from "express";
 import { SendChatMessageBody, SendChatMessageResponse } from "@workspace/api-zod";
 
 const router = Router();
@@ -17,14 +17,14 @@ type RateLimitEntry = {
 
 const chatRateLimits = new Map<string, RateLimitEntry>();
 
-function getClientKey(req: Parameters<typeof router.post>[1]): string {
+function getClientKey(req: Request): string {
   return req.ip || req.socket.remoteAddress || "unknown";
 }
 
 function rateLimitChat(
-  req: Parameters<typeof router.post>[1],
-  res: Parameters<typeof router.post>[2],
-  next: () => void,
+  req: Request,
+  res: Response,
+  next: NextFunction,
 ): void {
   const now = Date.now();
   const clientKey = getClientKey(req);
