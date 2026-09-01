@@ -4,7 +4,7 @@ import { SendChatMessageBody, SendChatMessageResponse } from "@workspace/api-zod
 const router = Router();
 
 const GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions";
-const GROQ_MODEL = "llama-3.3-70b-versatile";
+const GROQ_MODEL = "openai/gpt-oss-120b";
 const CHAT_WINDOW_MS = 10 * 60 * 1000;
 const CHAT_REQUESTS_PER_WINDOW = 10;
 const MAX_CHAT_MESSAGES = 12;
