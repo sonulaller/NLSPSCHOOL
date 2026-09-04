@@ -30,8 +30,8 @@ export default function FeeStructurePage() {
           subtitle="New Little Star Public School Kasan — Fee details for Session 2024–25"
         />
 
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
+        <section className="py-12 sm:py-20 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6">
 
             {/* Download Table */}
             <motion.div
@@ -39,7 +39,7 @@ export default function FeeStructurePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="mb-12 bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100"
+              className="mb-12 bg-white rounded-2xl shadow-sm overflow-x-auto border border-gray-100"
             >
               <table className="w-full text-sm">
                 <thead>

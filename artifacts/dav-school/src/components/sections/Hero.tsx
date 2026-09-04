@@ -25,31 +25,31 @@ export default function Hero() {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-20 h-full container mx-auto px-6 flex flex-col justify-center">
+      <div className="relative z-20 h-full container mx-auto px-4 sm:px-6 flex flex-col justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-3xl"
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white font-bold leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif text-white font-bold leading-tight mb-4 sm:mb-6">
             NLSP <span className="text-secondary italic">School</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mb-8 sm:mb-10 leading-relaxed">
             NLSPS Kasan shapes future leaders through values-driven education, state-of-the-art facilities, and a legacy of academic brilliance.
           </p>
           
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
             <a 
               href="#admissions"
-              className="bg-secondary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-secondary/90 transition-all hover:scale-105 shadow-[0_0_20px_rgba(212,160,23,0.3)] flex items-center gap-2"
+              className="bg-secondary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-secondary/90 transition-all hover:scale-105 shadow-[0_0_20px_rgba(212,160,23,0.3)] flex items-center gap-2 w-full sm:w-auto justify-center"
             >
-              Apply Now <ArrowRight size={20} />
+              Apply Now <ArrowRight size={18} className="hidden sm:block" />
             </a>
             <a 
               href="#about"
-              className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all"
+              className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-white/20 transition-all w-full sm:w-auto justify-center text-center"
             >
               Discover Our Legacy
             </a>

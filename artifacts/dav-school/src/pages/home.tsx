@@ -58,13 +58,13 @@ export default function Home() {
         <Hero />
 
         {/* Quick Links Grid */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-14">
+        <section className="py-16 sm:py-20 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="text-center mb-12 sm:mb-14">
               <span className="text-secondary font-bold uppercase tracking-widest text-sm block mb-3">Explore</span>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary">Everything About NLSPS</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary">Everything About NLSPS</h2>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
               {quickLinks.map((item, idx) => (
                 <motion.div
                   key={item.href}
@@ -75,12 +75,12 @@ export default function Home() {
                 >
                   <Link
                     href={item.href}
-                    className="group flex flex-col h-full bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl border border-gray-100 hover:border-secondary/30 transition-all duration-300"
+                    className="group flex flex-col h-full bg-white rounded-2xl p-5 sm:p-7 shadow-sm hover:shadow-xl border border-gray-100 hover:border-secondary/30 transition-all duration-300"
                   >
-                    <div className="mb-5 w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
+                    <div className="mb-5 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
                       {item.icon}
                     </div>
-                    <h3 className="text-lg font-serif font-bold text-primary mb-2 group-hover:text-secondary transition-colors">
+                    <h3 className="text-base sm:text-lg font-serif font-bold text-primary mb-2 group-hover:text-secondary transition-colors">
                       {item.title}
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed flex-1">{item.desc}</p>

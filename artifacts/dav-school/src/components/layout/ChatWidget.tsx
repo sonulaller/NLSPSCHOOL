@@ -93,20 +93,20 @@ export default function ChatWidget() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-[60]">
+    <div className="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 z-[60]">
       {open && (
-        <div className="mb-4 flex h-[min(640px,calc(100vh-7rem))] w-[min(390px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-2xl">
+        <div className="mb-4 flex h-[min(640px,calc(100svh-8rem))] w-[min(390px,calc(100vw-2rem))] max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-2xl">
           {/* Header */}
-          <div className="flex items-center justify-between bg-primary px-5 py-4 text-white">
-            <div className="flex items-center gap-3">
-              <div className="relative">
+          <div className="flex items-center justify-between gap-2 bg-primary px-4 sm:px-5 py-4 text-white">
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="relative shrink-0">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-white">
                   <Bot size={21} />
                 </div>
                 <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-primary bg-green-400" />
               </div>
-              <div>
-                <p className="font-serif text-lg font-bold">NLSPS Assistant</p>
+              <div className="min-w-0">
+                <p className="font-serif text-base sm:text-lg font-bold truncate">NLSPS Assistant</p>
                 <p className="text-xs text-white/70">
                   {sendMessage.isPending ? "Typing..." : "Online"}
                 </p>
@@ -116,7 +116,7 @@ export default function ChatWidget() {
               type="button"
               aria-label="Close chatbot"
               onClick={() => setOpen(false)}
-              className="rounded-full p-2 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+              className="rounded-full p-2 text-white/80 transition-colors hover:bg-white/10 hover:text-white shrink-0"
             >
               <X size={19} />
             </button>
@@ -216,9 +216,10 @@ export default function ChatWidget() {
         type="button"
         aria-label={open ? "Close chatbot" : "Open chatbot"}
         onClick={() => setOpen((current) => !current)}
-        className="ml-auto flex h-14 w-14 items-center justify-center rounded-full bg-secondary text-white shadow-xl transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
+        className="ml-auto flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-secondary text-white shadow-xl transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
       >
-        {open ? <X size={23} /> : <MessageCircle size={24} />}
+        {open ? <X size={20} className="sm:hidden" /> : <MessageCircle size={22} className="sm:hidden" />}
+        {open ? <X size={23} className="hidden sm:block" /> : <MessageCircle size={24} className="hidden sm:block" />}
       </button>
     </div>
   );

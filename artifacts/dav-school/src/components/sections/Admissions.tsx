@@ -68,9 +68,9 @@ export default function Admissions() {
   ];
 
   return (
-    <section id="admissions" className="py-24 bg-gray-50 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+    <section id="admissions" className="py-16 sm:py-20 lg:py-24 bg-gray-50 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
           <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 20 }}
@@ -78,21 +78,21 @@ export default function Admissions() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-secondary font-bold uppercase tracking-widest text-sm block mb-3">Join Us</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Admissions 2025-26</h2>
-            <p className="text-muted-foreground text-lg">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Admissions 2025-26</h2>
+            <p className="text-muted-foreground text-base sm:text-lg">
               Begin your child's journey of excellence. We welcome students who are eager to learn and grow in a nurturing environment.
             </p>
           </motion.div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100"
+            className="bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100"
           >
-            <h3 className="text-2xl font-serif font-bold text-primary mb-8">Admission Process</h3>
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary mb-8">Admission Process</h3>
             
             <div className="space-y-8">
               {steps.map((step, idx) => (
@@ -103,9 +103,9 @@ export default function Admissions() {
                   <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center shrink-0 shadow-md z-10">
                     {step.icon}
                   </div>
-                  <div>
-                    <h4 className="font-bold text-lg text-primary">{step.title}</h4>
-                    <p className="text-muted-foreground mt-1">{step.desc}</p>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-base sm:text-lg text-primary">{step.title}</h4>
+                    <p className="text-muted-foreground mt-1 text-sm sm:text-base">{step.desc}</p>
                   </div>
                 </div>
               ))}
@@ -125,9 +125,9 @@ export default function Admissions() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-primary p-8 md:p-10 rounded-3xl shadow-xl text-white"
+            className="bg-primary p-6 sm:p-8 md:p-10 rounded-3xl shadow-xl text-white"
           >
-            <h3 className="text-2xl font-serif font-bold mb-2">Admission Enquiry</h3>
+            <h3 className="text-xl sm:text-2xl font-serif font-bold mb-2">Admission Enquiry</h3>
             <p className="text-white/70 mb-8 text-sm">Leave your details and our admission counselor will get back to you.</p>
 
             {status === "success" ? (
@@ -145,14 +145,14 @@ export default function Admissions() {
             ) : (
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
-                  <label className="block text-sm font-medium mb-1 text-white/80">Parent's Name *</label>
+                  <label className="block text-sm font-medium mb-1 text-white/80">Student's Name *</label>
                   <input
                     type="text"
                     name="parentName"
                     value={form.parentName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40"
+                    className="w-full px-3 sm:px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40 text-sm sm:text-base"
                     placeholder="Enter full name"
                   />
                 </div>
@@ -163,11 +163,11 @@ export default function Admissions() {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40"
+                    className="w-full px-3 sm:px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40 text-sm sm:text-base"
                     placeholder="Enter email address"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium mb-1 text-white/80">Phone *</label>
                     <input
@@ -176,7 +176,7 @@ export default function Admissions() {
                       value={form.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40"
+                      className="w-full px-3 sm:px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40 text-sm sm:text-base"
                       placeholder="+91"
                     />
                   </div>
@@ -186,7 +186,7 @@ export default function Admissions() {
                       name="childClass"
                       value={form.childClass}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white appearance-none"
+                      className="w-full px-3 sm:px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white appearance-none text-sm sm:text-base"
                     >
                       <option value="" className="text-black">Select Class</option>
                       <option value="nursery" className="text-black">Nursery</option>
@@ -203,7 +203,7 @@ export default function Admissions() {
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40"
+                    className="w-full px-3 sm:px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40 text-sm sm:text-base"
                     placeholder="Any specific queries?"
                   />
                 </div>

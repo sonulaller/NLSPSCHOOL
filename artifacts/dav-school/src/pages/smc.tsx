@@ -39,11 +39,11 @@ export default function SMCPage() {
           subtitle="School Management Committee — New Little Star Public School Kasan, Kaithal (Haryana)"
         />
 
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
+        <section className="py-12 sm:py-20 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="text-center mb-8 sm:mb-12">
               <span className="text-secondary font-bold uppercase tracking-widest text-sm block mb-3">SMC Member List</span>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary">School Management Committee</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary">School Management Committee</h2>
               <p className="text-muted-foreground mt-3 text-sm">Updated: April 1, 2021</p>
             </div>
 

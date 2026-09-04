@@ -52,16 +52,16 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         solidNav
-          ? "bg-white/95 backdrop-blur-md shadow-md py-3"
-          : "bg-transparent py-5"
+          ? "bg-white/95 backdrop-blur-md shadow-md py-2 sm:py-3"
+          : "bg-transparent py-3 sm:py-5"
       }`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 z-50">
-          <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-white shadow">
+      <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-2 sm:gap-3 z-50">
+          <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full overflow-hidden flex items-center justify-center bg-white shadow">
             <img src="/school-logo.jpg" alt="NLSPS Kasan Logo" className="w-full h-full object-cover" />
           </div>
-          <span className={`font-serif font-bold text-xl leading-tight transition-colors duration-300 ${solidNav ? "text-primary" : "text-white"}`}>
+          <span className={`font-serif font-bold text-base sm:text-xl leading-tight transition-colors duration-300 ${solidNav ? "text-primary" : "text-white"}`}>
             NLSPS KASAN
           </span>
         </Link>
@@ -150,14 +150,14 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center gap-6 z-40"
+            className="absolute top-0 left-0 w-full min-h-screen bg-white flex flex-col items-center justify-center gap-5 sm:gap-6 z-40 overflow-y-auto px-6 py-24"
           >
             {navLinks.map((link) =>
               link.dropdown ? (
                 <div key={link.name} className="flex flex-col items-center gap-3">
                   <button
                     onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
-                    className="flex items-center gap-1 text-2xl font-serif text-primary hover:text-secondary transition-colors"
+                    className="flex items-center gap-1 text-xl sm:text-2xl font-serif text-primary hover:text-secondary transition-colors"
                   >
                     {link.name}
                     <ChevronDown size={20} className={`transition-transform duration-200 ${mobileAboutOpen ? "rotate-180" : ""}`} />
@@ -175,7 +175,7 @@ export default function Navbar() {
                             key={item.href}
                             href={item.href}
                             onClick={() => { setMobileMenuOpen(false); setMobileAboutOpen(false); }}
-                            className={`text-lg font-medium transition-colors ${
+                            className={`text-base sm:text-lg font-medium transition-colors ${
                               location === item.href ? "text-secondary" : "text-primary/70 hover:text-secondary"
                             }`}
                           >
@@ -191,18 +191,18 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-2xl font-serif transition-colors ${
-                    location === link.href ? "text-secondary" : "text-primary hover:text-secondary"
-                  }`}
-                >
-                  {link.name}
-                </Link>
+                    className={`text-xl sm:text-2xl font-serif transition-colors ${
+                      location === link.href ? "text-secondary" : "text-primary hover:text-secondary"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
               )
             )}
             <Link
               href="/admissions"
               onClick={() => setMobileMenuOpen(false)}
-              className="bg-secondary text-white px-8 py-3 rounded-full font-bold hover:bg-secondary/90 transition-colors"
+              className="bg-secondary text-white px-6 sm:px-8 py-3 rounded-full font-bold hover:bg-secondary/90 transition-colors text-sm sm:text-base"
             >
               Apply Now
             </Link>
