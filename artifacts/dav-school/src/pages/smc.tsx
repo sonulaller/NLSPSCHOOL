@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Seo from "@/SCO.md/Seo";
 import PageHeader from "@/components/layout/PageHeader";
 import { motion } from "framer-motion";
 
@@ -31,6 +32,10 @@ const designationColors: Record<string, string> = {
 export default function SMCPage() {
   return (
     <div className="flex flex-col min-h-screen">
+      <Seo
+        title="SMC Members | New Little Star Public School (NLSP School), Kasan, Kaithal"
+        description="School Management Committee members of New Little Star Public School (NLSP School), Kasan, District Kaithal, Haryana — the dedicated SMC governing our CBSE-affiliated school."
+      />
       <Navbar />
       <main className="flex-1">
         <PageHeader

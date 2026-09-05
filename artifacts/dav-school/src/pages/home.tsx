@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Building2, Users, Image, Bell, Phone } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Seo from "@/SCO.md/Seo";
 import Hero from "@/components/sections/Hero";
 
 const quickLinks = [
@@ -53,6 +54,10 @@ const quickLinks = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen relative">
+      <Seo
+        title="New Little Star Public School (NLSP School), Kasan, Kaithal, Haryana"
+        description="New Little Star Public School (NLSP School), Kasan, District Kaithal, Haryana — a CBSE-affiliated school offering quality education, modern facilities, admissions and academics from Nursery to Class XII."
+      />
       <Navbar />
       <main className="flex-1">
         <Hero />

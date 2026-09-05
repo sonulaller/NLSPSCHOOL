@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Seo from "@/SCO.md/Seo";
 import PageHeader from "@/components/layout/PageHeader";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
@@ -22,6 +23,10 @@ const feeData = [
 export default function FeeStructurePage() {
   return (
     <div className="flex flex-col min-h-screen">
+      <Seo
+        title="Fee Structure | New Little Star Public School (NLSP School), Kasan, Kaithal"
+        description="Fee structure of New Little Star Public School (NLSP School), Kasan, District Kaithal, Haryana — class-wise admission, registration, monthly fees and bus fare details for 2024-25."
+      />
       <Navbar />
       <main className="flex-1">
         <PageHeader

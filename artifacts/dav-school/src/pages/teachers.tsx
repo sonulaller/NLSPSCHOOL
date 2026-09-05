@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Seo from "@/SCO.md/Seo";
 import PageHeader from "@/components/layout/PageHeader";
 import { motion } from "framer-motion";
 
@@ -27,6 +28,10 @@ const teachers = [
 export default function TeachersPage() {
   return (
     <div className="flex flex-col min-h-screen">
+      <Seo
+        title="Our Teachers & Faculty | New Little Star Public School (NLSP School), Kasan"
+        description="Meet the dedicated teachers and faculty of New Little Star Public School (NLSP School), Kasan, District Kaithal, Haryana — experienced educators shaping the future of every student at NLSPS."
+      />
       <Navbar />
       <main className="flex-1">
         <PageHeader
