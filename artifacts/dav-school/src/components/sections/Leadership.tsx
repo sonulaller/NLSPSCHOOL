@@ -24,7 +24,8 @@ export default function Leadership() {
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
                 <img 
                   src="/principal.jpg" 
-                  alt="Principal" 
+                  alt="Mr. Angrej Singh, Principal of New Little Star Public School Kasan" 
+                  loading="lazy"
                   className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80" />
@@ -51,7 +52,7 @@ export default function Leadership() {
               </div>
               
               <div className="pt-6">
-                <img src="/images/signature-placeholder.png" alt="Signature" className="h-12 opacity-80 grayscale invert" onError={(e) => e.currentTarget.style.display = 'none'} />
+                <img src="/images/signature-placeholder.png" alt="Signature of Mr. Angrej Singh, Principal of NLSPS Kasan" loading="lazy" className="h-12 opacity-80 grayscale invert" onError={(e) => e.currentTarget.style.display = 'none'} />
                 <p className="font-serif font-bold text-lg sm:text-xl mt-4">Mr. Angrej Singh</p>
                 <p className="text-sm text-white/60">Principal, NLSPS Kasan</p>
               </div>

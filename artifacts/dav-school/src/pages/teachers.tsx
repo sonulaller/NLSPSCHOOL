@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import Seo from "@/SCO.md/Seo";
+import Seo from "@root/SCO.md/Seo";
 import PageHeader from "@/components/layout/PageHeader";
 import { motion } from "framer-motion";
 
@@ -56,7 +56,10 @@ export default function TeachersPage() {
             >
               <img
                 src="/teachers-group.jpg"
-                alt="NLSPS Kasan Teaching Staff"
+                alt="Teaching staff of New Little Star Public School Kasan"
+                width="1909"
+                height="824"
+                loading="lazy"
                 className="w-full h-auto object-cover"
               />
             </motion.div>
@@ -71,7 +74,7 @@ export default function TeachersPage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-8">
               {teachers.map((teacher, idx) => (
-                <motion.div
+                <motion.article
                   key={idx}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +85,8 @@ export default function TeachersPage() {
                   <div className="aspect-[3/4] overflow-hidden bg-gray-100">
                     <img
                       src={teacher.photo}
-                      alt={teacher.name}
+                      alt={`${teacher.name}, ${teacher.subject} at NLSPS Kasan`}
+                      loading="lazy"
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -93,7 +97,7 @@ export default function TeachersPage() {
                     <p className="text-secondary font-semibold text-sm mt-1">{teacher.subject}</p>
                     <p className="text-muted-foreground text-xs mt-1">{teacher.qualification}</p>
                   </div>
-                </motion.div>
+                </motion.article>
               ))}
 
               {/* Add More Placeholder */}

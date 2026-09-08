@@ -59,7 +59,7 @@ export default function Facilities() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {facilities.map((item, idx) => (
-            <motion.div
+            <motion.article
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -69,7 +69,8 @@ export default function Facilities() {
               <div className="relative h-52 sm:h-64 overflow-hidden">
                 <img 
                   src={item.image} 
-                  alt={item.title} 
+                  alt={`${item.title} at NLSPS Kasan`} 
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -80,7 +81,7 @@ export default function Facilities() {
                   {item.desc}
                 </p>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

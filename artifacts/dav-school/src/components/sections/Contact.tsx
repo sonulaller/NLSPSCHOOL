@@ -42,7 +42,7 @@ export default function Contact() {
                 <MapPin size={24} className="hidden sm:block" />
               </div>
               <div className="min-w-0">
-                <h4 className="font-bold text-base sm:text-lg text-primary mb-1">Campus Address</h4>
+                <h3 className="font-bold text-base sm:text-lg text-primary mb-1">Campus Address</h3>
                 <p className="text-muted-foreground text-sm sm:text-base">New Little Star Public School<br />Kichhana Road, Kasan<br />Kaithal, Haryana</p>
               </div>
             </div>
@@ -53,7 +53,7 @@ export default function Contact() {
                 <Phone size={24} className="hidden sm:block" />
               </div>
               <div>
-                <h4 className="font-bold text-base sm:text-lg text-primary mb-1">Phone</h4>
+                <h3 className="font-bold text-base sm:text-lg text-primary mb-1">Phone</h3>
                 <p className="text-muted-foreground text-sm sm:text-base">Coming Soon</p>
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function Contact() {
                 <Mail size={24} className="hidden sm:block" />
               </div>
               <div className="min-w-0">
-                <h4 className="font-bold text-base sm:text-lg text-primary mb-1">Email</h4>
+                <h3 className="font-bold text-base sm:text-lg text-primary mb-1">Email</h3>
                 <p className="text-muted-foreground text-sm sm:text-base break-all">{`newlittlestarkasan@gmail.com`}</p>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function Contact() {
                 <Clock size={24} className="hidden sm:block" />
               </div>
               <div>
-                <h4 className="font-bold text-base sm:text-lg text-primary mb-1">Working Hours</h4>
+                <h3 className="font-bold text-base sm:text-lg text-primary mb-1">Working Hours</h3>
                 <p className="text-muted-foreground text-sm sm:text-base">Monday – Saturday: Open · Closes 2:00 PM<br />Sunday: Closed</p>
               </div>
             </div>

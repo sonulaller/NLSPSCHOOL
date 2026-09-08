@@ -1,9 +1,10 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import Seo from "@/SCO.md/Seo";
+import Seo from "@root/SCO.md/Seo";
 import PageHeader from "@/components/layout/PageHeader";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
+import { Link } from "wouter";
 
 const feeData = [
   { class: "1st",  admission: "4000", registration: "1000", monthly: "1100", bus: "400" },
@@ -160,7 +161,7 @@ export default function FeeStructurePage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="mt-8 bg-yellow-50 border border-yellow-200 rounded-2xl p-5 text-sm text-yellow-800"
             >
-              <strong>Note:</strong> Admission fee is charged only at the time of new admission. Bus fare is optional and applicable only for students availing the school bus facility. For more information, contact the school office.
+              <strong>Note:</strong> Admission fee is charged only at the time of <Link href="/admissions" className="text-yellow-900 font-semibold underline underline-offset-2">new admission</Link>. Bus fare is optional and applicable only for students availing the school bus facility. For more information, <Link href="/contact" className="text-yellow-900 font-semibold underline underline-offset-2">contact the school office</Link>.
             </motion.div>
           </div>
         </section>

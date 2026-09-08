@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
+import { Link } from "wouter";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -9,7 +10,7 @@ export default function Hero() {
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
 
   return (
-    <div ref={ref} className="relative h-[100dvh] w-full overflow-hidden bg-primary">
+    <section ref={ref} className="relative h-[100dvh] w-full overflow-hidden bg-primary">
       {/* Background Image with Parallax */}
       <motion.div 
         style={{ y, opacity }}
@@ -17,8 +18,8 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-black/50 z-10" />
         <img 
-          src="/school-bg.png" 
-          alt="New Little Star Public School Campus" 
+          src="/school-bg.jpg" 
+          alt="" 
           className="w-full h-full object-cover object-center"
           style={{ minWidth: "100%", minHeight: "100%" }}
         />
@@ -37,22 +38,22 @@ export default function Hero() {
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mb-8 sm:mb-10 leading-relaxed">
-            NLSPS Kasan shapes future leaders through values-driven education, state-of-the-art facilities, and a legacy of academic brilliance.
+            NLSPS Kasan shapes future leaders through values-driven education, <Link href="/facilities" className="text-secondary underline decoration-secondary/50 underline-offset-4">state-of-the-art facilities</Link>, and a legacy of academic brilliance.
           </p>
           
           <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
-            <a 
-              href="#admissions"
+            <Link 
+              href="/admissions"
               className="bg-secondary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-secondary/90 transition-all hover:scale-105 shadow-[0_0_20px_rgba(212,160,23,0.3)] flex items-center gap-2 w-full sm:w-auto justify-center"
             >
               Apply Now <ArrowRight size={18} className="hidden sm:block" />
-            </a>
-            <a 
-              href="#about"
+            </Link>
+            <Link 
+              href="/about"
               className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-white/20 transition-all w-full sm:w-auto justify-center text-center"
             >
               Discover Our Legacy
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>
@@ -73,6 +74,6 @@ export default function Hero() {
           />
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 }

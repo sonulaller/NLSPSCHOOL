@@ -11,12 +11,15 @@ const navLinks = [
     dropdown: [
       { name: "About Us", href: "/about" },
       { name: "Fee Structure", href: "/fee-structure" },
-      { name: "SMC Members", href: "/smc" },
+      { name: "SMC Members", href: "/smc-members" },
     ],
   },
   { name: "Teachers", href: "/teachers" },
+  { name: "Academics", href: "/academics" },
+  { name: "Facilities", href: "/facilities" },
   { name: "Admissions", href: "/admissions" },
   { name: "Gallery", href: "/gallery" },
+  { name: "Notice Board", href: "/notice-board" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -59,7 +62,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 sm:gap-3 z-50">
           <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full overflow-hidden flex items-center justify-center bg-white shadow">
-            <img src="/school-logo.jpg" alt="NLSPS Kasan Logo" className="w-full h-full object-cover" />
+            <img src="/school-logo.jpg" alt="New Little Star Public School (NLSPS) Kasan Logo" className="w-full h-full object-cover" />
           </div>
           <span className={`font-serif font-bold text-base sm:text-xl leading-tight transition-colors duration-300 ${solidNav ? "text-primary" : "text-white"}`}>
             NLSPS KASAN
@@ -74,7 +77,7 @@ export default function Navbar() {
                 <button
                   onClick={() => setDropdownOpen(!dropdownOpen)}
                   className={`flex items-center gap-1 text-sm font-medium tracking-wide transition-colors hover:text-secondary ${
-                    location === link.href || location === "/smc"
+                    location === link.href || location === "/smc-members"
                       ? "text-secondary border-b-2 border-secondary pb-0.5"
                       : solidNav ? "text-foreground" : "text-white"
                   }`}
@@ -146,7 +149,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div
+          <motion.nav
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -206,7 +209,7 @@ export default function Navbar() {
             >
               Apply Now
             </Link>
-          </motion.div>
+          </motion.nav>
         )}
       </AnimatePresence>
     </header>

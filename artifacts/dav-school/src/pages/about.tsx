@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import Seo from "@/SCO.md/Seo";
+import Seo from "@root/SCO.md/Seo";
 import PageHeader from "@/components/layout/PageHeader";
 import About from "@/components/sections/About";
 import Leadership from "@/components/sections/Leadership";

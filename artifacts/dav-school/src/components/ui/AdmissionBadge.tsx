@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { X, Award } from "lucide-react";
+import { Link } from "wouter";
 
 export default function AdmissionBadge() {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,13 +23,13 @@ export default function AdmissionBadge() {
           className="fixed bottom-6 right-6 z-50 flex items-center"
         >
           <div className="relative group">
-            <a 
-              href="#admissions"
+            <Link 
+              href="/admissions"
               className="flex items-center gap-3 bg-secondary text-white px-5 py-3 rounded-full font-bold shadow-[0_4px_20px_rgba(212,160,23,0.4)] hover:scale-105 transition-transform"
             >
               <Award className="animate-pulse" />
               <span>Admissions 2025</span>
-            </a>
+            </Link>
             
             <button 
               onClick={() => setIsVisible(false)}

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Building2, Users, Image, Bell, Phone } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import Seo from "@/SCO.md/Seo";
+import Seo from "@root/SCO.md/Seo";
 import Hero from "@/components/sections/Hero";
 
 const quickLinks = [

@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "wouter";
 
 const notices = [
   {
@@ -43,16 +44,16 @@ export default function NoticeBoard() {
               <p className="text-muted-foreground mb-8">
                 Stay updated with the latest announcements, events, and important circulars from the school administration.
               </p>
-              <button className="text-primary font-bold hover:text-secondary transition-colors inline-flex items-center gap-2 border-b border-primary/20 pb-1">
+              <Link href="/notice-board" className="text-primary font-bold hover:text-secondary transition-colors inline-flex items-center gap-2 border-b border-primary/20 pb-1">
                 View all notices
-              </button>
+              </Link>
             </div>
           </motion.div>
 
           <div className="lg:col-span-8">
             <div className="space-y-6">
               {notices.map((notice, idx) => (
-                <motion.div
+                <motion.article
                   key={idx}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -69,10 +70,16 @@ export default function NoticeBoard() {
                         {notice.type}
                       </span>
                     </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-primary mb-2">{notice.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-primary mb-2">
+                      {notice.type === "Admission" ? (
+                        <Link href="/admissions" className="hover:text-secondary transition-colors">{notice.title}</Link>
+                      ) : (
+                        notice.title
+                      )}
+                    </h3>
                     <p className="text-sm sm:text-base text-muted-foreground">{notice.desc}</p>
                   </div>
-                </motion.div>
+                </motion.article>
               ))}
             </div>
           </div>

@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="col-span-1 lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-full overflow-hidden bg-white shadow flex items-center justify-center">
-                <img src="/school-logo.jpg" alt="NLSPS Logo" className="w-full h-full object-cover" />
+                <img src="/school-logo.jpg" alt="New Little Star Public School (NLSPS) Logo" loading="lazy" className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col">
                 <span className="font-serif font-bold text-base sm:text-lg leading-tight">NLSPS KASAN</span>
@@ -29,19 +29,21 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold text-base sm:text-lg mb-6 border-b border-white/10 pb-2 inline-block">Quick Links</h4>
+            <h2 className="font-bold text-base sm:text-lg mb-6 border-b border-white/10 pb-2 inline-block">Quick Links</h2>
             <ul className="space-y-3 text-white/70 text-sm">
               <li><Link href="/about" className="hover:text-secondary transition-colors">About Us</Link></li>
               <li><Link href="/teachers" className="hover:text-secondary transition-colors">Teachers</Link></li>
-             <li><Link href="/smc" className="hover:text-secondary transition-colors">SMC Members</Link></li>
+             <li><Link href="/smc-members" className="hover:text-secondary transition-colors">SMC Members</Link></li>
               <li><Link href="/admissions" className="hover:text-secondary transition-colors">Admission Process</Link></li>
               <li><Link href="/facilities" className="hover:text-secondary transition-colors">Facilities</Link></li>
+              <li><Link href="/academics" className="hover:text-secondary transition-colors">Academics</Link></li>
+              <li><Link href="/fee-structure" className="hover:text-secondary transition-colors">Fee Structure</Link></li>
               <li><Link href="/notice-board" className="hover:text-secondary transition-colors">Notice Board</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold text-base sm:text-lg mb-6 border-b border-white/10 pb-2 inline-block">Important Links</h4>
+            <h2 className="font-bold text-base sm:text-lg mb-6 border-b border-white/10 pb-2 inline-block">Important Links</h2>
             <ul className="space-y-3 text-white/70 text-sm">
               <li><a href="#" className="hover:text-secondary transition-colors">CBSE Mandatory Disclosure</a></li>
               <li><a href="#" className="hover:text-secondary transition-colors">Transfer Certificates</a></li>
@@ -52,7 +54,7 @@ export default function Footer() {
           </div>
 
           <div className="sm:col-span-2 lg:col-span-1">
-            <h4 className="font-bold text-base sm:text-lg mb-6 border-b border-white/10 pb-2 inline-block">Newsletter</h4>
+            <h2 className="font-bold text-base sm:text-lg mb-6 border-b border-white/10 pb-2 inline-block">Newsletter</h2>
             <p className="text-white/60 text-sm mb-4">Subscribe to get the latest updates and newsletters.</p>
             <form className="flex gap-2">
               <input type="email" placeholder="Your email" className="w-full min-w-0 px-3 py-2 bg-white/10 border border-white/20 rounded-md text-sm text-white focus:outline-none focus:border-secondary" />

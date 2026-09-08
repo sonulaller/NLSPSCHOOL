@@ -1,6 +1,7 @@
 import { motion, animate } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
+import { Link } from "wouter";
 
 const stats = [
   { to: 1000, suffix: "+", label: "Students Enrolled" },
@@ -72,9 +73,9 @@ export default function About() {
             </p>
 
             <div className="pt-2 sm:pt-6">
-              <a href="#admissions" className="text-primary font-bold hover:text-secondary transition-colors inline-flex items-center gap-2 border-b border-primary/20 pb-1">
+              <Link href="/admissions" className="text-primary font-bold hover:text-secondary transition-colors inline-flex items-center gap-2 border-b border-primary/20 pb-1">
                 Read our full vision & mission
-              </a>
+              </Link>
             </div>
           </motion.div>
 
@@ -88,6 +89,7 @@ export default function About() {
               <img 
                 src="/about-school.jpg" 
                 alt="New Little Star Public School Kasan Students and Staff" 
+                loading="lazy"
                 className="w-full h-auto object-cover aspect-[4/3]"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />

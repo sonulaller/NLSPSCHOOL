@@ -19,11 +19,11 @@ if (Number.isNaN(port) || port <= 0) {
 
 const server = createServer(app);
 
-server.listen(port, "0.0.0.0", (err) => {
-  if (err) {
-    logger.error({ err }, "Error listening on port");
-    process.exit(1);
-  }
+server.on("error", (err) => {
+  logger.error({ err }, "Error listening on port");
+  process.exit(1);
+});
 
+server.listen(port, "0.0.0.0", () => {
   logger.info({ port }, "Server listening");
 });

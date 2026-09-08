@@ -1,4 +1,3 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
@@ -12,10 +11,9 @@ import GalleryPage from '@/pages/gallery';
 import AdmissionsPage from '@/pages/admissions';
 import ContactPage from '@/pages/contact';
 import NoticeBoardPage from '@/pages/notice-board';
+import AcademicsPage from '@/pages/academics';
 import NotFound from '@/pages/not-found';
 import ChatWidget from '@/components/layout/ChatWidget';
-
-const queryClient = new QueryClient();
 
 function Router() {
   return (
@@ -23,13 +21,14 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={AboutPage} />
       <Route path="/teachers" component={TeachersPage} />
-      <Route path="/smc" component={SMCPage} />
+      <Route path="/smc-members" component={SMCPage} />
       <Route path="/facilities" component={FacilitiesPage} />
       <Route path="/gallery" component={GalleryPage} />
       <Route path="/admissions" component={AdmissionsPage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/notice-board" component={NoticeBoardPage} />
       <Route path="/fee-structure" component={FeeStructurePage} />
+      <Route path="/academics" component={AcademicsPage} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -37,15 +36,13 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
-          <Router />
-        </WouterRouter>
-        <ChatWidget />
-        <Toaster />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <TooltipProvider>
+      <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+        <Router />
+      </WouterRouter>
+      <ChatWidget />
+      <Toaster />
+    </TooltipProvider>
   );
 }
 

@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { CheckCircle2, FileText, Users, Calculator } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Admissions() {
   const ref = useRef(null);
@@ -63,7 +64,7 @@ export default function Admissions() {
     {
       icon: <CheckCircle2 size={24} />,
       title: "Enrollment",
-      desc: "Submission of documents and fee payment to confirm admission."
+      desc: <>Submission of documents and <Link href="/fee-structure" className="underline underline-offset-2">fee payment</Link> to confirm admission.</>
     }
   ];
 
