@@ -28,7 +28,7 @@ export default function AdmissionBadge() {
               className="flex items-center gap-3 bg-secondary text-white px-5 py-3 rounded-full font-bold shadow-[0_4px_20px_rgba(212,160,23,0.4)] hover:scale-105 transition-transform"
             >
               <Award className="animate-pulse" />
-              <span>Admissions 2025</span>
+              <span>Admissions Open 2025</span>
             </Link>
             
             <button 

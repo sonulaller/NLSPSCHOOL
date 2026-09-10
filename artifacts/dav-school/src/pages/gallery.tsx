@@ -16,7 +16,7 @@ export default function GalleryPage() {
         <PageHeader
           label="Moments"
           title="Life at NLSPS Kasan"
-          subtitle="Glimpses of the vibrant campus life, events, and achievements of our students."
+          subtitle="Glimpses of vibrant campus life at our school in Kasan, Haryana — events and achievements of our students."
         />
         <Gallery />
       </main>

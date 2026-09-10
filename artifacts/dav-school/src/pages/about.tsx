@@ -17,7 +17,7 @@ export default function AboutPage() {
         <PageHeader
           label="Who We Are"
           title="About NLSPS Kasan"
-          subtitle="A premier institution built on values, legacy, and academic brilliance."
+          subtitle="One of the top schools in Kaithal district — built on values, legacy, and academic brilliance."
         />
         <About />
         <Leadership />

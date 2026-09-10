@@ -81,7 +81,7 @@ export default function Admissions() {
             <span className="text-secondary font-bold uppercase tracking-widest text-sm block mb-3">Join Us</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Admissions 2025-26</h2>
             <p className="text-muted-foreground text-base sm:text-lg">
-              Begin your child's journey of excellence. We welcome students who are eager to learn and grow in a nurturing environment.
+              Admissions are open at NLSPS Kasan for 2025-26. As a CBSE-affiliated school in Kasan, Haryana, we welcome students from Nursery to Class 12 who are eager to learn and grow in a nurturing environment.
             </p>
           </motion.div>
         </div>

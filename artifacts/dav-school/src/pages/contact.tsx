@@ -16,7 +16,7 @@ export default function ContactPage() {
         <PageHeader
           label="Get In Touch"
           title="Contact Us"
-          subtitle="We're here to help. Reach out to us for admissions, queries, or any information."
+          subtitle="We're here to help. Reach out to us for school admission in Kaithal, Haryana, queries, or any information."
         />
         <Contact />
       </main>

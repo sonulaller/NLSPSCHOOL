@@ -16,7 +16,7 @@ export default function AcademicsPage() {
         <PageHeader
           label="Academic Excellence"
           title="Academics"
-          subtitle="CBSE curriculum with a holistic approach — nurturing intellect, character, and creativity."
+          subtitle="A CBSE school in Kaithal nurturing intellect, character, and creativity from Nursery to Class XII."
         />
         <Academics />
       </main>

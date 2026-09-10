@@ -38,7 +38,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mb-8 sm:mb-10 leading-relaxed">
-            NLSPS Kasan shapes future leaders through values-driven education, <Link href="/facilities" className="text-secondary underline decoration-secondary/50 underline-offset-4">state-of-the-art facilities</Link>, and a legacy of academic brilliance.
+            New Little Star Public School, NLSPS Kasan, is a leading school in Kaithal, Haryana — shaping future leaders through values-driven education, <Link href="/facilities" className="text-secondary underline decoration-secondary/50 underline-offset-4">state-of-the-art facilities</Link>, and a legacy of academic brilliance.
           </p>
           
           <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">

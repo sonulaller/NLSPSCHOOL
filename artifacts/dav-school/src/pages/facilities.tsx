@@ -16,7 +16,7 @@ export default function FacilitiesPage() {
         <PageHeader
           label="Campus Life"
           title="Our Facilities"
-          subtitle="World-class infrastructure designed to inspire academic rigor, athletic prowess, and creative exploration."
+          subtitle="Modern school infrastructure in Haryana designed to inspire academic rigor, athletic prowess, and creative exploration."
         />
         <Facilities />
       </main>

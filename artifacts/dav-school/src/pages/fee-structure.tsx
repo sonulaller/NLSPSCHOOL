@@ -33,7 +33,7 @@ export default function FeeStructurePage() {
         <PageHeader
           label="Transparency"
           title="Fee Structure"
-          subtitle="New Little Star Public School Kasan — Fee details for Session 2024–25"
+          subtitle="New Little Star Public School Kasan — an affordable CBSE school in Haryana with clear fee details for Session 2024–25"
         />
 
         <section className="py-12 sm:py-20 bg-gray-50">

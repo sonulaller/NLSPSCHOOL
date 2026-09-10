@@ -65,11 +65,11 @@ export default function About() {
             </h2>
             
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              NLSPS Kasan is a premier institution affiliated with CBSE. We blend timeless values with contemporary pedagogical practices to nurture global citizens.
+              NLSPS Kasan is a premier CBSE-affiliated school in Kasan, Kaithal, Haryana. We blend timeless values with contemporary pedagogical practices to nurture responsible global citizens.
             </p>
             
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Our motto, <strong className="text-primary">"Let Knowledge Illuminate Life"</strong>, guides every endeavor. We don't just teach; we inspire minds, build character, and shape the future leaders of India.
+              Our motto, <strong className="text-primary">"Let Knowledge Illuminate Life"</strong>, guides every endeavor. We don't just teach — we deliver quality education that inspires minds, builds character, and shapes the future leaders of India.
             </p>
 
             <div className="pt-2 sm:pt-6">

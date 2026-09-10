@@ -16,7 +16,7 @@ export default function NoticeBoardPage() {
         <PageHeader
           label="Announcements"
           title="Notice Board"
-          subtitle="Stay updated with the latest circulars, events, and important announcements."
+          subtitle="Stay updated with the latest circulars, events, and announcements from NLSPS Kasan, a top school in Haryana."
         />
         <NoticeBoard />
       </main>

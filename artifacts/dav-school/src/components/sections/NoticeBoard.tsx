@@ -42,7 +42,7 @@ export default function NoticeBoard() {
               <span className="text-secondary font-bold uppercase tracking-widest text-sm block mb-3">Updates</span>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary mb-6">Notice Board</h2>
               <p className="text-muted-foreground mb-8">
-                Stay updated with the latest announcements, events, and important circulars from the school administration.
+                Stay updated with the latest announcements, events, and important circulars from the school administration at NLSPS Kasan.
               </p>
               <Link href="/notice-board" className="text-primary font-bold hover:text-secondary transition-colors inline-flex items-center gap-2 border-b border-primary/20 pb-1">
                 View all notices

@@ -34,7 +34,7 @@ export default function AdmissionsPage() {
         <PageHeader
           label="Join Us"
           title="Admissions 2025–26"
-          subtitle="Begin your child's journey of excellence. Registrations are now open."
+          subtitle="Begin your child's journey of excellence — school admission at NLSPS Kasan is open from Nursery to Class 12."
         />
         <Admissions />
       </main>

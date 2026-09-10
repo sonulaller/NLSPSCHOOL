@@ -40,7 +40,7 @@ export default function Academics() {
             <span className="text-secondary font-bold uppercase tracking-widest text-sm block mb-3">Academic Excellence</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-6">Comprehensive Curriculum</h2>
             <p className="text-white/70 text-base sm:text-lg">
-              Following the CBSE curriculum with a holistic approach, ensuring students excel intellectually, emotionally, and socially.
+              As a leading CBSE school in Kaithal, we follow a holistic curriculum from Nursery to Class 12, ensuring students excel intellectually, emotionally, and socially.
             </p>
           </motion.div>
         </div>

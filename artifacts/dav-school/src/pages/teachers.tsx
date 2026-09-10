@@ -37,7 +37,7 @@ export default function TeachersPage() {
         <PageHeader
           label="Our Faculty"
           title="Meet Our Teachers"
-          subtitle="Dedicated educators committed to shaping the future of every student at NLSPS Kasan."
+          subtitle="Meet some of the best teachers in Kaithal — dedicated educators shaping the future of every student at NLSPS Kasan."
         />
 
         {/* Group Photo */}

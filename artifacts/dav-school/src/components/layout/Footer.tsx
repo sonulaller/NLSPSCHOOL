@@ -18,7 +18,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/60 text-sm mb-6 leading-relaxed">
-              Empowering students with knowledge, character, and values. Affiliated to CBSE, New Delhi.
+              Empowering students in Kaithal, Haryana with knowledge, character, and values. New Little Star Public School is affiliated to CBSE, New Delhi.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><Facebook size={16} /></a>

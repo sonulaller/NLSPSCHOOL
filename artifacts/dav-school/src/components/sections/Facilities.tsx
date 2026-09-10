@@ -52,7 +52,7 @@ export default function Facilities() {
             <span className="text-secondary font-bold uppercase tracking-widest text-sm block mb-3">Campus Life</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary mb-6">World-Class Infrastructure</h2>
             <p className="text-muted-foreground text-base sm:text-lg">
-              Our campus is designed to provide an inspiring environment that supports academic rigor, athletic prowess, and creative exploration.
+              Our school facilities in Kasan are designed to provide an inspiring environment that supports academic rigor, athletic prowess, and creative exploration.
             </p>
           </motion.div>
         </div>
