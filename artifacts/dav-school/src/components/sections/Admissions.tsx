@@ -8,7 +8,7 @@ export default function Admissions() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const [form, setForm] = useState({
-    parentName: "",
+    studentName: "",
     email: "",
     phone: "",
     childClass: "",
@@ -34,7 +34,7 @@ export default function Admissions() {
       const data = await res.json();
       if (res.ok && data.success) {
         setStatus("success");
-        setForm({ parentName: "", email: "", phone: "", childClass: "", message: "" });
+        setForm({ studentName: "", email: "", phone: "", childClass: "", message: "" });
       } else {
         setStatus("error");
         setErrorMsg(data.error || "Something went wrong. Please try again.");
@@ -149,8 +149,8 @@ export default function Admissions() {
                   <label className="block text-sm font-medium mb-1 text-white/80">Student's Name *</label>
                   <input
                     type="text"
-                    name="parentName"
-                    value={form.parentName}
+                    name="studentName"
+                    value={form.studentName}
                     onChange={handleChange}
                     required
                     className="w-full px-3 sm:px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40 text-sm sm:text-base"
@@ -183,18 +183,14 @@ export default function Admissions() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-1 text-white/80">Child's Class</label>
-                    <select
+                    <input
+                      type="text"
                       name="childClass"
                       value={form.childClass}
                       onChange={handleChange}
-                      className="w-full px-3 sm:px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white appearance-none text-sm sm:text-base"
-                    >
-                      <option value="" className="text-black">Select Class</option>
-                      <option value="nursery" className="text-black">Nursery</option>
-                      <option value="kg" className="text-black">KG</option>
-                      <option value="1" className="text-black">Class I</option>
-                      <option value="11" className="text-black">Class XI</option>
-                    </select>
+                      className="w-full px-3 sm:px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40 text-sm sm:text-base"
+                      placeholder="Class likhein (jaise Nursery, Class 5, Class 12)"
+                    />
                   </div>
                 </div>
                 <div>
